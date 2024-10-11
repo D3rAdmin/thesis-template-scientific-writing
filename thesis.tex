@@ -3,7 +3,7 @@
     a4paper,
     sfdefaults=false,
     toc=chapterentrywithdots,
-    twoside,openright,
+    oneside,openright,
     titlepage,
     parskip=half,
     headings=normal,  % reduces heading size
@@ -138,7 +138,7 @@
 \setcounter{tocdepth}{2}  % ...but don't include them in toc
 
 \frontmatter
-\include{cover}
+\input{cover}
 % \cleardoublepage
 
 % download the following form (requires VPN) and complete it (hit save in your editor)
@@ -146,6 +146,7 @@
 %\includepdf{SB_0009_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf}\cleardoublepage
 
 % \include{content/0_abstract}\cleardoublepage
+\clearpage
 \tableofcontents
 
 \mainmatter

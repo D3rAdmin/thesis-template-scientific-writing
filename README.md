@@ -26,7 +26,7 @@ It will be included in the final `thesis.pdf`.
 
 ```powershell
 #1
-pdflatex thesis.tex && bibtex thesis.aux && pdflatex thesis.tex && pdflatex thesis.tex
+pdflatex thesis.tex; bibtex thesis.aux; pdflatex thesis.tex; pdflatex thesis.tex
 
 #2
 bibtex thesis.aux; pdflatex thesis.tex
