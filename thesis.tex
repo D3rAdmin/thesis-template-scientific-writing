@@ -25,12 +25,12 @@
 \newcommand{\autor}{Georg Simon Ohm}
 \newcommand{\studiengang}{Medieninformatik}  % {Informatik,Wirtschaftsinformatik,Medieninformatik}
 \newcommand{\matrikelnr}{362\,6173}
-\newcommand{\erstgutachter}{Prof.\,Dr.~Korbinian Riedhammer}
-\newcommand{\zweitgutachter}{Prof.\,Dr.~Bartosz von\,Rymon\,Lipinski}
-\newcommand{\betreuer}{M.Sc.\,~Martina Schmidt}
-\newcommand{\unternehmen}{Musterfirma GmbH}
+\newcommand{\erstgutachter}{-}
+\newcommand{\zweitgutachter}{-}
+\newcommand{\betreuer}{-}
+\newcommand{\unternehmen}{-}
 \newcommand{\logo}{figures/TH-Nuernberg-RGB.png}
-\newcommand{\keywords}{hot, fuzz}
+\newcommand{\keywords}{-}
  
 
 % custom head and foot
@@ -151,7 +151,8 @@
 
 \mainmatter
 \include{content/1_priorisation}
-\include{content/2_summary}
+\include{content/2_summary_01}
+\include{content/2_summary_02}
 % \include{content/3_method}
 % \include{content/4_experiments}
 % \include{content/5_outlook}
@@ -172,7 +173,8 @@
 \bibliography{refs}
 
 % remove if not needed
-\appendix
+% \appendix
+\renewcommand{\appendixname}{Anhang}
 \include{content/a1_supplemental}
 
 % \printnoidxglossaries
