@@ -1749,7 +1749,7 @@ FUNCTION {format.tech.report.number}
 FUNCTION {format.doi}
 { doi empty$
     { "" }
-    { "doi: " doi * }
+    { "DOI: " doi * }
   if$
 }
 
@@ -1758,7 +1758,7 @@ FUNCTION {format.doi}
 FUNCTION {format.isbn}
 { isbn empty$
     { "" }
-    { "isbn: " isbn * }
+    { "ISBN: " isbn * }
   if$
 }
 
@@ -1962,7 +1962,7 @@ FUNCTION {format.url}
       this.status.std
       cap.yes 'status.cap :=
       name.url.prefix " " *
-      "\url{" * url * "}" *
+      "\url{" * url * "}," *
       punct.no 'this.status.punct :=
       punct.period 'prev.status.punct :=
       space.normal 'this.status.space :=
@@ -1971,9 +1971,6 @@ FUNCTION {format.url}
     }
   if$
 }
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%
 %% ENTRY HANDLERS %%
@@ -1996,8 +1993,8 @@ FUNCTION {article}
   format.pages output
   format.date "year" output.warn
   format.doi output
-  format.note output
   format.url output
+  format.note output
   fin.entry
   if.url.std.interword.spacing
 }
@@ -2099,8 +2096,8 @@ FUNCTION {incollection}
   format.chapter output
   format.pages output
   format.isbn output
-  format.note output
   format.url output
+  format.note output
   fin.entry
   if.url.std.interword.spacing
 }
@@ -2125,8 +2122,8 @@ FUNCTION {inproceedings}
   if$
   format.paper output
   format.pages output
-  format.note output
   format.url output
+  format.note output
   fin.entry
   if.url.std.interword.spacing
 }
@@ -2286,8 +2283,8 @@ FUNCTION {techreport}
   format.address "address" bibinfo.check output
   format.tech.report.number output.nonnull
   format.date "year" output.warn
-  format.note output
   format.url output
+  format.note output
   fin.entry
   if.url.std.interword.spacing
 }
