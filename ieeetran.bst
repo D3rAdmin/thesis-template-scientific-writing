@@ -234,7 +234,7 @@ FUNCTION {bbl.etal}{ "et~al." }
 FUNCTION {bbl.editors}{ "Hrsgg." }
 FUNCTION {bbl.editor}{ "Hrsg." }
 FUNCTION {bbl.edition}{ "Aufl." }
-FUNCTION {bbl.volume}{ "Band" }
+FUNCTION {bbl.volume}{ "Jg." }
 FUNCTION {bbl.of}{ "von" }
 FUNCTION {bbl.number}{ "Nr." }
 FUNCTION {bbl.in}{ "in" }
@@ -302,11 +302,13 @@ ENTRY
     chapter
     day
     dayfiled
+    doi
     edition
     editor
     howpublished
     institution
     intype
+    isbn
     journal
     key
     language
@@ -1742,7 +1744,23 @@ FUNCTION {format.tech.report.number}
   if$
 }
 
+%% doi
 
+FUNCTION {format.doi}
+{ doi empty$
+    { "" }
+    { "doi: " doi * }
+  if$
+}
+
+%% isbn
+
+FUNCTION {format.isbn}
+{ isbn empty$
+    { "" }
+    { "isbn: " isbn * }
+  if$
+}
 
 %% note
 
@@ -1977,6 +1995,7 @@ FUNCTION {article}
   format.number.if.use.for.article output
   format.pages output
   format.date "year" output.warn
+  format.doi output
   format.note output
   format.url output
   fin.entry
@@ -2079,6 +2098,7 @@ FUNCTION {incollection}
   format.number output
   format.chapter output
   format.pages output
+  format.isbn output
   format.note output
   format.url output
   fin.entry
