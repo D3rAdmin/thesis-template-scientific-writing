@@ -1993,7 +1993,6 @@ FUNCTION {article}
   format.pages output
   format.date "year" output.warn
   format.doi output
-  format.url output
   format.note output
   fin.entry
   if.url.std.interword.spacing
